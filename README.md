@@ -20,7 +20,9 @@ The goal of this project is to:
 
 ## Compilation
 The code for this project will be compiled with:
-`gcc -Wall -Werror -Wextra -pedantic *.c`
+```c
+gcc -Wall -Werror -Wextra -pedantic *.c
+```
 
 ### 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
 This function produces output according to the following format:
@@ -28,12 +30,15 @@ This function produces output according to the following format:
 * [ ] -- writes output to stdout
 * [ ] -- `format` is a character string in the prototype
 * [ ] -- handles the following conversion specifiers for characters, strings and data types:
+	
 	* : `c`
-        * : `s`
+	* : 's'
         * : `%`
 
-Prototype: `int _printf(const char *format, ...);`
-
+Prototype: 
+```c 
+int _printf(const char *format, ...);
+```
 ### 1. Education is when you read the fine print. Experience is what you get if you don't 
 This function handles the following conversion specifiers for integers:
 	* : `d`

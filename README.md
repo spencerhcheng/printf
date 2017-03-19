@@ -20,6 +20,7 @@ The goal of this project is to:
 
 ## Compilation
 The code for this project will be compiled with:
+
 ```c
 gcc -Wall -Werror -Wextra -pedantic *.c
 ```
@@ -31,9 +32,9 @@ This function produces output according to the following format:
 * [ ] -- `format` is a character string in the prototype
 * [ ] -- handles the following conversion specifiers for characters, strings and data types:
 	
-	* : `c`
-	* : 's'
-        * : `%`
+	* : `c` : char
+	* : `s` : string
+	* : `%` : data type specifier
 
 Prototype: 
 ```c 
@@ -41,10 +42,14 @@ int _printf(const char *format, ...);
 ```
 ### 1. Education is when you read the fine print. Experience is what you get if you don't 
 This function handles the following conversion specifiers for integers:
-	* : `d`
-        * : `i`
+	* : `d` : decimal
+	* : `i` : integer
 
 ### 2. Just because it's in print doesn't mean it's the gospel
 Man page for function
 
-File: `man_3_printf`
+File: 
+```c
+man_3_printf
+```
+

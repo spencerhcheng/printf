@@ -115,20 +115,22 @@ int _printf(const char *format, ...)
 	int i, j;
 	int charCount;
 	va_list args;
+	const char delim;
 	
+	delim = '%';
 	va_start(args, format);
 	
 	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		if (format[i] != '%')
+		if (format[i] != delim)
 		{
 			_putchar(format[i]);
 		}
-		else if (format[i] == '%')
+		else if (format[i] == delim)
 		{
-			if (format[i + 1] == '%')
+			if (format[i + 1] == delim)
 			{
 				_putchar('%');
 				continue;

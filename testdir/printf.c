@@ -41,7 +41,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			j += convertArgs(format[i + 1], valist);			i++;
+			j += convertArgs(format[i + 1], valist);
+			i++;
 		}
 		else
 		{

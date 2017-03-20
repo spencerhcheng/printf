@@ -1,6 +1,12 @@
 # 0x10. C - printf
+
+##COLLABORATORS
+#001 - Willis Lau - github: `lauwillis1991`
+#002 - Spencer Cheng - github: `spencerhcheng`
+
 ## GOAL
 The goal of this project is to:
+* [ ] -- implement our own printf function
 * [ ] -- learn how printf works behind the scenes
 * [ ] -- build a printf function that serves as a tribute to the built in stdio.h printf
 * [ ] -- gain familiarity with structs, header files, indefinite arguments, etc...

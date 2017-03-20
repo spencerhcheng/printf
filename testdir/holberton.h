@@ -3,19 +3,21 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-int _putchar(char c);
 /** 
  * struct prints - structure that takes in a type
  * @type: arguement type: char, string, decimal, integer
  * @f: function
  */
-typedef struct prints
+typedef struct willis
 {
-	char *type;
-	void (*f)();
-} prints;
-void print_char(va_list args);
-void print_string(va_list args);
-void print_decimal(va_list args);
-void print_integer(va_list args);
+	char type;
+	int (*f)();
+} willis_t;
+int _putchar(va_list args);
+int convertArgs(char c, va_list args);
+int _printf(const char *format, ...);
+int print_string(va_list args);
+int print_unsigned(unsigned int b);
+int print_integer(va_list args);
+int print_char(char c);
 #endif

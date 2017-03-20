@@ -1,156 +1,53 @@
 #include "holberton.h"
-#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
-/** 
- * print_char - prints a char
- * args: arguement of type char
- * Return: nothing
- */
-void print_char(va_list args)
+int convertArgs(char c, va_list args)
 {
-	_putchar(va_arg(args, char));
-}
+	willis_t spencer[] = {
+	{'c', _putchar},
+	{'s', print_string},
+	{'d', print_integer},
+	{'i', print_integer},
+	};
 
-/** 
- * print_string - prints string
- * args: arguement of type char
- * Return: nothing
- */
-void print_string(va_list args)
-{
 	int i;
-	char *string;
-	string = va_arg(args, char *);
-	
-	for (i = 0; string[i] != '\0'; i++)
+
+	for (i = 0; i < 4; i++)
 	{
-		_putchar(string[i]);
+		if (spencer[i].type == c)
+		{
+			return (spencer[i].f(args));
+		}
+		return (print_char(c));
 	}
 }
-
-/** 
- * print_decimal - prints decimal values
- * args: arguement of type char
- * Return: nothing
- */
-void print_decimal(va_list args)
-{
-	int i = va_arg(args, int);
-	
-	if ((i / 10) != 0)
-	{
-		print_decimal(i / 10);
-	
-		if (i > 0)
-		{
-		_putchar(i % 10 + '0');
-		}
-		else 
-		{
-		putchar(- i + 10 + '0');
-		}
-	}
-	else if (( i / 10 == 0) && (i % 10 != 0) && (i > 0))
-	{
-		putchar(i % 10 + '0');
-	}
-	else if ((i  / 10 == 0) && (i % 10 != 0) && (i <= 0))
-	{
-		putchar('-');
-		putchar(-i % 10 + '0');
-	}	
-}
-
-/** 
- * print_integer - prints integer values
- * args: arguement of type char
- * Return: nothing
- */
-void print_integer(va_list args)
-{
-	int i = va_arg(args, int);
-	
-	if ((i / 10) != 0)
-	{
-		print_decimal(i / 10);
-	
-		if (i > 0)
-		{
-		_putchar(i % 10 + '0');
-		}
-		else 
-		{
-		putchar(- i + 10 + '0');
-		}
-	}
-	else if (( i / 10 == 0) && (i % 10 != 0) && (i > 0))
-	{
-		putchar(i % 10 + '0');
-	}
-	else if ((i  / 10 == 0) && (i % 10 != 0) && (i <= 0))
-	{
-		putchar('-');
-		putchar(-i % 10 + '0');
-	}
-}
-
-/** 
- * _printf - prints char, string, integer and float
- * @format: initial string with type specifier
- * Return: 0
- */
 
 int _printf(const char *format, ...)
 {
-	prints prints_t[] = {
-	{"c", print_char},
-	{"s", print_string},
-	{"d", print_decimal},
-	{"i", print_integer},
-	{NULL, NULL}
-	};
-
+	va_list valist;
 	int i, j;
-	int charCount;
-	va_list args;
-	const char delim;
-	
-	delim = '%';
-	va_start(args, format);
-	
-	i = 0;
-	while (format != NULL && format[i] != '\0')
+
+	j = 0;
+	va_start(valist, format);
+
+	if (format == NULL)
 	{
-		j = 0;
-		if (format[i] != delim)
+		return (0);
+	}
+	
+	for (i = 0; format[i]; i++)
+	{
+		if (format[i] == '%')
 		{
-			_putchar(format[i]);
+			j += convertArgs(format[i + 1], valist);			i++;
 		}
-		else if (format[i] == delim)
+		else
 		{
-			if (format[i + 1] == delim)
-			{
-				_putchar('%');
-				continue;
-			}
-
-			i++;
-			j = 0;
-
-				while (prints_t[j].type != NULL)
-				{
-					if (format[i] == prints[j].type[0])
-					{
-						prints_t[j].f(args);
-					}
-					j++;
-				}
-			}
+			j += print_char(format[i]);
 		}
-		i++;
-	}	
-	va_end(args);
-	return (0);
-}
+	}
+	va_end (valist);
+	return (j);
+}	

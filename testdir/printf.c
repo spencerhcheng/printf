@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * convertArgs - calls function when
+ * format[i] matches struct case
+ * @c: character arguement
+ * @args: arguments
+ * Return: function in struct
+ */
 int convertArgs(char c, va_list args)
 {
 	willis_t spencer[] = {
@@ -20,10 +27,15 @@ int convertArgs(char c, va_list args)
 		{
 			return (spencer[i].f(args));
 		}
-		return (print_char(c));
 	}
 }
 
+/**
+ * _printf - prints out test cases
+ * @format: initial string to print out
+ * and look for type match
+ * Return: characters
+ */
 int _printf(const char *format, ...)
 {
 	va_list valist;
@@ -36,7 +48,7 @@ int _printf(const char *format, ...)
 	{
 		return (0);
 	}
-	
+
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
@@ -49,6 +61,6 @@ int _printf(const char *format, ...)
 			j += print_char(format[i]);
 		}
 	}
-	va_end (valist);
+	va_end(valist);
 	return (j);
-}	
+}

@@ -28,6 +28,7 @@ int convertArgs(char c, va_list args)
 			return (spencer[i].f(args));
 		}
 	}
+	return (0);
 }
 
 /**

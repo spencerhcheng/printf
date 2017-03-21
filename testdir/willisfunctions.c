@@ -96,9 +96,10 @@ int print_integer(va_list args)
 
 /**
  * print_char - puts char to std output
- * @c: char argument
+ * @c: char arguement
  * Return: int
  */
+
 int print_char(char c)
 {
 	write(1, &c, 1);

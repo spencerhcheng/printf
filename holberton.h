@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * struct prints - structure that takes in a type
+ * willis - structure that takes in a type
  * @type: arguement type: char, string, decimal, integer
  * @f: function
  */

@@ -15,8 +15,6 @@ int _printf(const char *format, ...)
 	{'s', print_string},
 	{'d', print_integer},
 	{'i', print_integer},
-	{'r', reverse_string},
-	{'b', convert_binary},
 	{'\0', NULL}
 	};
 

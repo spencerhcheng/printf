@@ -1,17 +1,24 @@
-.TH man 2 "04 May 2015" "0.32" "holberton man page"
+.TH man 2 "22 March 2017" "0.01" "Spencer and Willis' printf function"
 .SH NAME
-.B holberton -
-become a full-stack software engineer.
-.SH SYNOPSIS
-holberton [STUDENTNAME]
+.B printf - format and print data
+Our goal was to replicate the C library function to send formatted output to
+stdout.
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
+`%c` - prints char to standard out
+
+`%s` - prints string to standard out
+
+`%d` - prints decimal to standard out
+
+`%i` - prints integer to standard out
+
+`%r` - prints reversed string to standard out
+
+`%b` - prints binary conversion of integer or decimal to standard out
+
 .SH OPTIONS
-.B holberton
-does not take any options. However, you can supply studentname.
-.SH SEE ALSO
-.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
-.SH BUGS
-No known bugs.
-.SH AUTHOR
-Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+.B Does not take any options.
+.SH ISSUES TO FIX
+Multiple bugs - will update this list
+.SH AUTHORS
+Spencer Cheng, Willis Lau

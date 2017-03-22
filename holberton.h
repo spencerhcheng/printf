@@ -18,5 +18,4 @@ int print_string(va_list args);
 void print_us(unsigned int b);
 int print_integer(va_list args);
 int print_char(char c);
-int convert_binary(va_list args);
 #endif

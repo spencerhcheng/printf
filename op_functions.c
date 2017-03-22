@@ -62,7 +62,7 @@ int print_us(unsigned int b)
 
 	(write(1, &y, 1));
 
-	return (x);
+	return (y);
 }
 
 

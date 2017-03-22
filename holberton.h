@@ -1,8 +1,6 @@
 #ifndef PRINTF_H
 #define PRINTF_H
 #include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
 /**
  * struct willis - structure that takes in a type
  * @type: arguement type: char, string, decimal, integer
@@ -17,7 +15,7 @@ int _putchar(va_list args);
 int convertArgs(char c, va_list args);
 int _printf(const char *format, ...);
 int print_string(va_list args);
-int print_us(unsigned int b);
+void print_us(unsigned int b);
 int print_integer(va_list args);
 int print_char(char c);
 #endif

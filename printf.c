@@ -43,9 +43,7 @@ int _printf(const char *format, ...)
 					j += spencer[x].f(valist);
 				}
 				else if (format[i + 1] == '%')
-				{
 					i = i + 1;
-				}
 			}
 		}
 	j += print_char(format[i]);

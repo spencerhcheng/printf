@@ -45,16 +45,12 @@ int print_string(va_list args)
  * @num: arguements
  * Return: int
  */
-int print_us(unsigned int num)
+void print_us(unsigned int num)
 {
-	static int counter;
 	int digit;
-
-	counter = 0;
 
 	if (num / 10 != 0)
 	{
-		counter++;
 		print_us(num / 10);
 	}
 
@@ -62,7 +58,6 @@ int print_us(unsigned int num)
 
 	(write(1, &digit, 1));
 
-	return (counter);
 }
 
 
@@ -75,9 +70,11 @@ int print_integer(va_list args)
 {
 	char negSign;
 	int i, counter;
+	int numCopy;
 
 	i = va_arg(args, int);
 
+	numCopy = i;
 	counter = 0;
 
 	negSign = '-';
@@ -89,7 +86,13 @@ int print_integer(va_list args)
 		i = -i;
 	}
 
-	counter += print_us((unsigned int)i);
+	while (numCopy != 0)
+	{
+		numCopy = numCopy / 10;
+		counter += 1;
+	}
+
+	print_us((unsigned int)i);
 
 	return (counter);
 }

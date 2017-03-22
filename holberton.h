@@ -2,8 +2,9 @@
 #define PRINTF_H
 #include <stdarg.h>
 /**
- * struct willis - structure that takes in a type
- * @type: arguement type: char, string, decimal, integer
+ * struct willis - structure that takes in a print type
+ * @type: arguement type: char, string, decimal, integer,
+ * reverse string, conversion to binary
  * @f: function
  */
 typedef struct willis

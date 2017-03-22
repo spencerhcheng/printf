@@ -47,6 +47,5 @@ int _printf(const char *format, ...)
 	j += print_char(format[i]);
 	}
 va_end(valist);
-printf("VALUE OF J: %d\n\n", j);
 return (j);
 }

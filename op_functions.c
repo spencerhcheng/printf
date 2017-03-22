@@ -42,7 +42,7 @@ int print_string(va_list args)
 
 /**
  * print_us - puts unsigned int to std output
- * @num: arguements
+ * @num: arguments
  * Return: int
  */
 void print_us(unsigned int num)
@@ -62,8 +62,9 @@ void print_us(unsigned int num)
 
 
 /**
- * print_integer - puts integer to std output
- * @args: arguements
+ * print_integer - determines length of int
+ * and calls print_us to print to std output
+ * @args: arguments
  * Return: int
  */
 int print_integer(va_list args)
@@ -99,7 +100,7 @@ int print_integer(va_list args)
 
 /**
  * print_char - puts char to std output
- * @c: char arguement
+ * @c: char argument
  * Return: int
  */
 

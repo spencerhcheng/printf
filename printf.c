@@ -3,7 +3,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * _printf - prints out several test cases
+ * _printf - prints out strings, ints, decimals
+ * strings, reverses strings and converts to
+ * binary to standard output
  * @format: initial string to print out
  * and look for type match
  * Return: characters

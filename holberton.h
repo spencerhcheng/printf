@@ -15,7 +15,9 @@ int _putchar(va_list args);
 int convertArgs(char c, va_list args);
 int _printf(const char *format, ...);
 int print_string(va_list args);
+int reverse_string(va_list args);
 void print_us(unsigned int b);
 int print_integer(va_list args);
 int print_char(char c);
+int convert_binary(va_list args);
 #endif

@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "holberton.h"
 #include <stdarg.h>
-
+#include <stdio.h>
 /**
  * _putchar - puts char to std output
  * @args: arguements

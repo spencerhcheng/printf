@@ -3,7 +3,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * convert_binary - puts integer to std output
+ * convert_binary - converts int or dec to
+ * binary and returns length. Calls print_us
+ * function which prints to std output
  * @args: arguements
  * Return: int
  */

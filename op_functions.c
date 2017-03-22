@@ -41,11 +41,11 @@ int print_string(va_list args)
 }
 
 /**
- * print_unsigned - puts unsigned int to std output
+ * print_us - puts unsigned int to std output
  * @b: arguements
  * Return: int
  */
-int print_unsigned(unsigned int b)
+int print_us(unsigned int b)
 {
 	static int x;
 	int y;
@@ -55,7 +55,7 @@ int print_unsigned(unsigned int b)
 	if (b / 10 != 0)
 	{
 		x++;
-		print_unsigned (b / 10);
+		print_us(b / 10);
 	}
 
 	y = ((b % 10) + '0');
@@ -89,7 +89,7 @@ int print_integer(va_list args)
 		j++;
 	}
 
-	j += print_unsigned((unsigned int) i);
+	j += print_us((unsigned int)i);
 
 	return (j);
 }

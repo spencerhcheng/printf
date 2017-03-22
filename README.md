@@ -1,5 +1,4 @@
-<a href="//imgur.com/lpodF">
-
+![printf](http://i.imgur.com/4IkNJWt.jpg)
 # 0x10. C - printf
 
 #COLLABORATORS

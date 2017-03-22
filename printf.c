@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdarg.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * _printf - prints out several test cases
  * @format: initial string to print out
@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	{'s', print_string},
 	{'d', print_integer},
 	{'i', print_integer},
+	{'r', reverse_string},
+	{'b', convert_binary},
 	{'\0', NULL}
 	};
 
@@ -47,5 +49,6 @@ int _printf(const char *format, ...)
 	j += print_char(format[i]);
 	}
 va_end(valist);
+printf("VALUE OF J: %d\n\n", j);
 return (j);
 }

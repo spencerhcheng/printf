@@ -1,8 +1,8 @@
 # 0x10. C - printf
 
-##COLLABORATORS
-001 - Willis Lau - github: `lauwillis1991`
-002 - Spencer Cheng - github: `spencerhcheng`
+#COLLABORATORS
+Willis Lau - github: `lauwillis1991`
+Spencer Cheng - github: `spencerhcheng`
 
 ## GOAL
 The goal of this project is to:

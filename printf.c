@@ -46,7 +46,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	j += print_char(format[i]);
-
 	}
 va_end(valist);
 return (j);

@@ -1,4 +1,4 @@
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/lpodF"><a href="//imgur.com/lpodF"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<a href="//imgur.com/lpodF">
 
 # 0x10. C - printf
 

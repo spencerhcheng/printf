@@ -4,7 +4,7 @@
 #include <stdarg.h>
 
 /**
- * _printf - prints out several test cases
+ * _printf - prints. out several test cases
  * @format: initial string to print out
  * and look for type match
  * Return: characters

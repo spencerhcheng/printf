@@ -84,9 +84,9 @@ int print_integer(va_list args)
 
 	if (i < 0)
 	{
+		counter++;
 		write(1, &negSign, 1);
 		i = -i;
-		counter++;
 	}
 
 	counter += print_us((unsigned int)i);

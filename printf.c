@@ -28,8 +28,8 @@ int _printf(const char *format, ...)
 	j = 0;
 	va_start(valist, format);
 
-	if (format == NULL)
-	return (0);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (0);
 
 	for (i = 0; format[i]; i++)
 	{

@@ -1,13 +1,12 @@
-![printf](http://i.imgur.com/4IkNJWt.jpg)
+![printf](http://microchip.wdfiles.com/local--files/tls2101%3Aprintf/printf2.png)
 # 0x10. C - printf
 
-#COLLABORATORS
-Willis Lau - github: `lauwillis1991`
+#AUTHOR
 Spencer Cheng - github: `spencerhcheng`
 
 ## GOAL
 The goal of this project is to:
-* [ ] -- implement our own printf function
+* [ ] -- implement a custom printf function and learn how to deal with writing a larger program
 * [ ] -- learn how printf works behind the scenes
 * [ ] -- build a printf function that serves as a tribute to the built in stdio.h printf
 * [ ] -- gain familiarity with structs, header files, indefinite arguments, etc...
@@ -27,7 +26,7 @@ The goal of this project is to:
 
 ## COMPILATION
 The code for this project will be compiled with:
-```c
+```
 gcc -Wall -Werror -Wextra -pedantic *.c
 ```
 ## TASKS
@@ -43,7 +42,7 @@ This function produces output according to the following format:
 	* : `%` : data type specifier
 
 Prototype: 
-```c 
+``` 
 int _printf(const char *format, ...);
 ```
 ### 1. Education is when you read the fine print. Experience is what you get if you don't 

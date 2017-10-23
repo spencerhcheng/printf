@@ -1,7 +1,4 @@
 #include "holberton.h"
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
 /**
  * _printf - prints out strings, ints, decimals
  * strings, reverses strings and converts to
@@ -12,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	willis_t spencer[] = {
+	operations_t ops[] = {
 	{'c', _putchar},
 	{'s', print_string},
 	{'d', print_integer},
@@ -33,14 +30,14 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i]; i++)
 	{
-		for (x = 0; spencer[x].type != '\0'; x++)
+		for (x = 0; ops[x].type != '\0'; x++)
 		{
 			if (format[i] == '%')
 			{
-				if (format[i + 1] == spencer[x].type)
+				if (format[i + 1] == ops[x].type)
 				{
 					i = i + 2;
-					j += spencer[x].f(valist);
+					j += ops[x].f(valist);
 				}
 				else if (format[i + 1] == '%')
 					i = i + 1;

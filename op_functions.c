@@ -1,6 +1,4 @@
-#include <unistd.h>
 #include "holberton.h"
-#include <stdarg.h>
 
 /**
  * _putchar - puts char to std output
